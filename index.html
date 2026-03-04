@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOTYA Refer Link</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+    background-size:400% 400%;
+    animation: gradientBG 8s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:90%;
+    max-width:420px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+    overflow:hidden;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.header{
+    background:#ff3d00;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.button-area{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:40px 20px;
+}
+
+.btn{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:none;
+    font-size:16px;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+    transition:0.4s;
+    position:relative;
+}
+
+.akash{
+    background:#00c853;
+    box-shadow:0 0 20px #00c853;
+}
+
+.riyad{
+    background:#d50000;
+    box-shadow:0 0 20px #d50000;
+}
+
+.btn:hover{
+    transform:scale(1.15);
+}
+
+.btn:active{
+    transform:scale(0.95);
+}
+
+/* Pulse Animation */
+.btn::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border:2px solid white;
+    animation:pulse 2s infinite;
+    top:0;
+    left:0;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1); opacity:0.7;}
+    70%{transform:scale(1.4); opacity:0;}
+    100%{opacity:0;}
+}
+
+@media(max-width:400px){
+    .btn{
+        width:90px;
+        height:90px;
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">HOTYA Refer Link</div>
+    <div class="button-area">
+        <button class="btn akash" onclick="openAkash()">AKASH</button>
+        <button class="btn riyad" onclick="openRiyad()">RIYAD</button>
+    </div>
+</div>
+
+<script>
+function openAkash(){
+    window.open("https://hy1.in/fMcBv4l", "_blank");
+}
+
+function openRiyad(){
+    window.open("https://hy1.in/fLEzNrj", "_blank");
+}
+</script>
+
+</body>
+</html>
